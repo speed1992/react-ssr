@@ -16,6 +16,5 @@ ReactDOM.hydrate(
         <BrowserRouter>
             <Routes />
         </BrowserRouter>
-    </Provider>
-    ,
+    </Provider>,
     document.getElementById('root'))
