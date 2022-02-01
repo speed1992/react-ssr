@@ -1,11 +1,19 @@
 import express from "express";
+import createStore from "./helpers/createStore";
 import renderer from './helpers/renderer';
 
 const app = express();
 
 app.use(express.static('public'));
 
-app.get('*', (req, res) => res.send(renderer(req)))
+app.get('*', (req, res) => {
+    const store = createStore();
+
+    // Some logic to initialize
+    // and load data into the store
+
+    res.send(renderer(req))
+})
 
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
