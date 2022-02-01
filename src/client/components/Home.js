@@ -6,7 +6,6 @@ const Home = () => {
             <div>I am the VERY VERY BEST Home Component</div>
             <button onClick={() => {
                 const msg = "Hi there!";
-                // alert(msg);
                 console.log(msg)
             }}>Press Me!</button>
         </div>
