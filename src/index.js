@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import express from "express";
 import createStore from "./helpers/createStore";
 import renderer from './helpers/renderer';
@@ -12,7 +13,7 @@ app.get('*', (req, res) => {
     // Some logic to initialize
     // and load data into the store
 
-    res.send(renderer(req))
+    res.send(renderer(req, store))
 })
 
 app.get('/favicon.ico', (req, res) => res.status(204).end());
