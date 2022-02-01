@@ -2,7 +2,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Provider from 'react-redux';
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
@@ -16,5 +16,6 @@ ReactDOM.hydrate(
         <BrowserRouter>
             <Routes />
         </BrowserRouter>
-    </Provider>,
+    </Provider>
+    ,
     document.getElementById('root'))
