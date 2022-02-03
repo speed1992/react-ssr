@@ -36,8 +36,6 @@ const mapStateToProps = (state) => {
 
 function loadData(store) {
 
-    console.log("I am trying to load some data");
-
     return store.dispatch(fetchUsers());
 
 }
